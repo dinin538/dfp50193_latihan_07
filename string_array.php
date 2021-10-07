@@ -7,64 +7,63 @@
     <title>String & Array</title>
 </head>
 <body>
-<?php 
-    $nama = "DINI NABILAH BINTI HALIM";
-    echo $nama=[3]; #A
-    echo $nama=[5]; #A
-    echo $nama=[8]; #A
-    ?>
-     <hr>
 <?php
-     $pelajar[0] ='DINI';
-     $pelajar[1] ='NABILAH';
-     $pelajar[2] ='HALIM';
+    $nama = "DINI NABILAH BINTI HALIM";
+    echo $nama[3];
+    echo $nama[0];
+    echo $nama[1];
+    echo $nama[0];
+    ?>
+    <hr>
+    <?php
 
-     for ($x = 0; $x < 3; $x++) {
-         echo $pelajar[$x] .' ';
-     }
-     echo '<hr>';
+    $pelajar[0] = 'DINI';
+    $pelajar [1] = 'NABILAH';
+    $pelajar[2] = 'HALIM';
 
-     foreach ($pelajar as $pel) {
-         echo $pel . '  ';
-     }
-     echo '<hr>';
+    for($x = 0; $x <3; $x++){
+    echo $pelajar[$x]. ' ';
+    }
+    echo '<hr>';
 
-     $pelajars = implode(' ' ,$pelajar);
-     echo $pelajars;
-     echo '<hr>';
+    foreach ($pelajar as $pel) {
+        echo $pel . ' ';
+    }
 
-     #explode
-      $ptss = 'POLITEKNIK TUANKU SYED SIRAJUDDIN';
-      $kata = explode('  ', $ptss);
-      echo $kata[2];
+    echo '<hr>';
+    $pelajars = implode(' ',$pelajar);
+    echo $pelajars;
+    echo '<hr>';
 
-      $senarai = 'Ali, Abu , Adi, Man ,Din';
-      echo "<p>senarai asal : $senarai</P>";
-      $ahli = explode( ',',$senarai);
-      echo '<pre>',print_r($ahli),'</pre>';
-     ?>
+    #explode
+    $ptss = 'POLITEKNIK TUANKU SYED SIRAJUDDIN';
+    $kata = explode(' ',$ptss);
+    echo $kata[2];
 
-     <ol>
-         <?php
-         foreach($ahli as $nama) {
-             echo "<li>$nama<li>";
+    $senarai = 'Ali,Abu,Adi,Man,Din';
+    echo "<Senarai asal : $senarai</p>";
+    $ahli = explode(',',$senarai);
+    echo '<pre>',print_r($ahli),'<pre>';
+    ?>
+    <ol>
+        <?php
+        foreach ($ahli as $knama) {
+            echo "<li>$nama<//li>";
+        }
+        ?>
+        </ol>
+        <hr>
 
-         }
-         ?>
-         </ol>
-
-         <?php
-         $citacita = 'Doktor';
-         $hasil = strcmp($citacita, 'Doktor');
-         if ($hasil == 0) {
-             echo 'Sama';
-
-         } elseif ($hasil < 0) {
-             echo 'Kurang';
-
-         } else {
-             echo 'Lebih';
-         }
-         ?> 
+        <?php
+        $citacita = 'Doktor';
+        $hasil = strcmp($citacita,'Doctor');
+        if($hasil == 0){
+            echo 'Sama';
+        }elseif ($hasil < 0){
+            echo 'Kurang';
+        } else {
+            echo 'Lebih';
+        }
+        ?>
 </body>
 </html>

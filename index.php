@@ -39,6 +39,9 @@
     $lokasi = strpos($noMatric, 'F') + 1;
     $bilangan = substr($noMatric,$lokasi);
     echo "<p>Bilangan: $bilangan</p>";
+
+    
     ?>
+    <h2><a href="string_array.php">String & Array</a></h2>
 </body>
 </html>
